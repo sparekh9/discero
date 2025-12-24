@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Math Rendering Test</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.js"></script>
+</head>
+<body>
+    <h2>Math Rendering Test</h2>
+    
+    <h3>Current AI Generated Content (broken):</h3>
+    <div>Text with frac{a}{b} and partial derivatives</div>
+    
+    <h3>What should be generated (working):</h3>
+    <div id="correct-math"></div>
+    
+    <h3>Test Cases:</h3>
+    <div>
+        <p>Inline: <span id="inline1"></span> and <span id="inline2"></span></p>
+        <p>Block: <div id="block1"></div></p>
+        <p>Fractions: <span id="frac1"></span></p>
+        <p>Greek letters: <span id="greek1"></span></p>
+    </div>
+
+    <script>
+        // Test what the AI should generate
+        katex.render("\\frac{a}{b}", document.getElementById("correct-math"));
+        
+        // Test various LaTeX expressions
+        katex.render("x^2 + y^2 = z^2", document.getElementById("inline1"));
+        katex.render("E = mc^2", document.getElementById("inline2"));
+        katex.render("\\int_{-\\infty}^{\\infty} e^{-x^2} dx = \\sqrt{\\pi}", document.getElementById("block1"));
+        katex.render("\\frac{\\partial f}{\\partial x}", document.getElementById("frac1"));
+        katex.render("\\alpha + \\beta = \\gamma", document.getElementById("greek1"));
+    </script>
+</body>
+</html>
