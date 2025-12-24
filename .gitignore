@@ -29,3 +29,10 @@ dist-ssr
 *.sw?
 
 .vercel
+
+# Documentation (Claude-generated)
+DEPLOYMENT.md
+LAUNCH_CHECKLIST.md
+QUICK_FIX.md
+VERCEL_DEPLOYMENT.md
+MATH_OPTIMIZATION.md
