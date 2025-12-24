@@ -29,6 +29,7 @@ dist-ssr
 *.sw?
 
 .vercel
+.claude
 
 # Documentation (Claude-generated)
 DEPLOYMENT.md
