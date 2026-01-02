@@ -146,9 +146,21 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
   }
 
   const loginWithGoogle = async () => {
-    const provider = new GoogleAuthProvider()
-    const { user } = await signInWithPopup(auth, provider)
-    await createUserProfile(user)
+    try {
+      const provider = new GoogleAuthProvider()
+      console.log('Attempting Google login...')
+      const { user } = await signInWithPopup(auth, provider)
+      console.log('Google login successful, creating profile...')
+      await createUserProfile(user)
+      console.log('Profile created successfully')
+    } catch (error: any) {
+      console.error('Google login error:', {
+        code: error.code,
+        message: error.message,
+        details: error
+      })
+      throw error
+    }
   }
 
   const logout = async () => {

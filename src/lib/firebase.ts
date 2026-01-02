@@ -13,6 +13,14 @@ const firebaseConfig = {
   // measurementId removed - Analytics disabled to prevent initialization errors
 }
 
+// Debug: Log config to verify env vars are loaded (REMOVE AFTER DEBUGGING)
+console.log('Firebase Config Check:', {
+  hasApiKey: !!firebaseConfig.apiKey,
+  hasAuthDomain: !!firebaseConfig.authDomain,
+  hasProjectId: !!firebaseConfig.projectId,
+  authDomain: firebaseConfig.authDomain
+})
+
 const app = initializeApp(firebaseConfig)
 export const auth = getAuth(app)
 export const db = getFirestore(app)
