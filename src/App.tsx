@@ -3,6 +3,7 @@ import { AuthProvider } from './contexts/AuthContext'
 import Layout from './components/Layout'
 import Home from './components/Home'
 import LoginForm from './components/auth/LoginForm'
+import SignupForm from './components/auth/SignupForm'
 import ProtectedRoute from './components/auth/ProtectedRoute'
 import Dashboard from './components/Dashboard'
 import MyCourses from './components/dashboard/MyCourses'
@@ -24,7 +25,7 @@ function App() {
           </Route>
 
           <Route path="/login" element={<LoginForm />} />
-          <Route path="/signup" element={<LoginForm />} />
+          <Route path="/signup" element={<SignupForm />} />
 
           <Route 
             path="/dashboard" 
