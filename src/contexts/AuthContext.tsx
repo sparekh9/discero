@@ -103,7 +103,7 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
         uid: user.uid,
         email: user.email!,
         displayName: user.displayName || '',
-        photoURL: user.photoURL || undefined,
+        ...(user.photoURL && { photoURL: user.photoURL }),
         demographics: defaultDemographics,
         learningPreferences: defaultPreferences,
         subscriptionTier: 'free',
