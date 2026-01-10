@@ -32,7 +32,7 @@ const Hero: React.FC = () => {
           </h1>
 
           <p className="text-xl md:text-2xl text-gray-600 mb-12 max-w-3xl mx-auto leading-relaxed">
-            Transform your learning journey with a personalized experience tailored to your experience, learning style and pace.
+            Transform your learning journey with a personalized experience tailored to your experience and pace.
           </p>
 
           {/* CTA Buttons */}
@@ -70,18 +70,127 @@ const Hero: React.FC = () => {
           <div className="relative bg-white/30 backdrop-blur-md border border-white/40 rounded-3xl p-8 max-w-5xl mx-auto transition-all duration-500 hover:bg-white/40 hover:border-white/60 hover:shadow-2xl hover:shadow-primary-500/30 group shadow-xl shadow-black/10">
             <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-primary-400/10 via-secondary-400/10 to-primary-400/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
 
-            <div className="relative z-10 bg-gradient-to-br from-white/40 to-white/20 backdrop-blur-sm rounded-2xl h-80 flex items-center justify-center border border-white/50 overflow-hidden">
+            <div className="relative z-10 bg-gradient-to-br from-white/40 to-white/20 backdrop-blur-sm rounded-2xl p-6 border border-white/50 overflow-hidden">
               {/* Grid pattern overlay */}
               <div className="absolute inset-0 bg-[linear-gradient(to_right,#00000008_1px,transparent_1px),linear-gradient(to_bottom,#00000008_1px,transparent_1px)] bg-[size:24px_24px]"></div>
 
-              <div className="relative text-center z-10">
-                <div className="relative bg-gradient-to-br from-primary-500 to-secondary-500 rounded-2xl w-24 h-24 flex items-center justify-center mx-auto mb-6 shadow-xl shadow-primary-500/50 group-hover:scale-110 transition-transform duration-500">
-                  <svg className="w-12 h-12 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
-                  </svg>
+              {/* Animated Dashboard Content */}
+              <div className="relative z-10 space-y-4">
+                {/* Header */}
+                <div className="flex items-center justify-between mb-6">
+                  <div>
+                    <h3 className="text-lg font-bold text-gray-900">Your Dashboard</h3>
+                    <p className="text-sm text-gray-600">Track your learning progress</p>
+                  </div>
+                  <div className="w-8 h-8 bg-primary-100 rounded-full flex items-center justify-center">
+                    <span className="text-primary-600 font-semibold text-xs">U</span>
+                  </div>
                 </div>
-                <p className="text-gray-900 text-xl font-bold mb-2">Interactive Learning Dashboard</p>
-                <p className="text-gray-600 text-base max-w-md mx-auto">AI-powered personalized learning experience with adaptive content and real-time progress tracking</p>
+
+                {/* Stats Cards Row */}
+                <div className="grid grid-cols-4 gap-3">
+                  <div className="bg-white/20 backdrop-blur-sm border border-white/30 rounded-xl p-3 transition-all duration-300 hover:bg-white/30 hover:shadow-lg hover:shadow-primary-500/20 group/card animate-float" style={{ animationDelay: '0s' }}>
+                    <div className="absolute inset-0 rounded-xl bg-gradient-to-br from-primary-400/10 to-secondary-400/10 opacity-0 group-hover/card:opacity-100 transition-opacity duration-300"></div>
+                    <div className="relative z-10">
+                      <div className="text-xl mb-1">📚</div>
+                      <p className="text-xs text-gray-600 font-semibold uppercase tracking-wide">Courses</p>
+                      <p className="text-2xl font-bold text-gray-900">12</p>
+                    </div>
+                  </div>
+
+                  <div className="bg-white/20 backdrop-blur-sm border border-white/30 rounded-xl p-3 transition-all duration-300 hover:bg-white/30 hover:shadow-lg hover:shadow-green-500/20 group/card animate-float" style={{ animationDelay: '0.2s' }}>
+                    <div className="absolute inset-0 rounded-xl bg-gradient-to-br from-green-400/10 to-emerald-400/10 opacity-0 group-hover/card:opacity-100 transition-opacity duration-300"></div>
+                    <div className="relative z-10">
+                      <div className="text-xl mb-1">⚡</div>
+                      <p className="text-xs text-gray-600 font-semibold uppercase tracking-wide">Active</p>
+                      <p className="text-2xl font-bold text-gray-900">5</p>
+                    </div>
+                  </div>
+
+                  <div className="bg-white/20 backdrop-blur-sm border border-white/30 rounded-xl p-3 transition-all duration-300 hover:bg-white/30 hover:shadow-lg hover:shadow-blue-500/20 group/card animate-float" style={{ animationDelay: '0.4s' }}>
+                    <div className="absolute inset-0 rounded-xl bg-gradient-to-br from-blue-400/10 to-indigo-400/10 opacity-0 group-hover/card:opacity-100 transition-opacity duration-300"></div>
+                    <div className="relative z-10">
+                      <div className="text-xl mb-1">🎯</div>
+                      <p className="text-xs text-gray-600 font-semibold uppercase tracking-wide">Done</p>
+                      <p className="text-2xl font-bold text-gray-900">47</p>
+                    </div>
+                  </div>
+
+                  <div className="bg-white/20 backdrop-blur-sm border border-white/30 rounded-xl p-3 transition-all duration-300 hover:bg-white/30 hover:shadow-lg hover:shadow-purple-500/20 group/card animate-float" style={{ animationDelay: '0.6s' }}>
+                    <div className="absolute inset-0 rounded-xl bg-gradient-to-br from-purple-400/10 to-pink-400/10 opacity-0 group-hover/card:opacity-100 transition-opacity duration-300"></div>
+                    <div className="relative z-10">
+                      <div className="text-xl mb-1">📈</div>
+                      <p className="text-xs text-gray-600 font-semibold uppercase tracking-wide">Progress</p>
+                      <p className="text-2xl font-bold text-gray-900">78%</p>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Course Cards */}
+                <div className="space-y-3 mt-6">
+                  <div className="flex items-center justify-between mb-2">
+                    <h4 className="text-sm font-bold text-gray-900">Continue Learning</h4>
+                    <span className="text-xs text-primary-600 font-semibold">View All →</span>
+                  </div>
+
+                  <div className="bg-white/20 backdrop-blur-sm border border-white/30 rounded-xl p-4 transition-all duration-300 hover:bg-white/30 hover:border-white/40 hover:shadow-lg hover:shadow-primary-500/20 cursor-pointer group/course animate-slide-up" style={{ animationDelay: '0.8s' }}>
+                    <div className="absolute inset-0 rounded-xl bg-gradient-to-r from-primary-400/5 to-secondary-400/5 opacity-0 group-hover/course:opacity-100 transition-opacity duration-300"></div>
+                    <div className="relative z-10 flex items-center justify-between">
+                      <div className="flex-1">
+                        <div className="flex items-center space-x-2 mb-2">
+                          <span className="bg-primary-500/20 backdrop-blur-sm text-primary-800 border border-primary-500/30 px-2 py-0.5 rounded-lg text-xs font-semibold">
+                            Mathematics
+                          </span>
+                          <span className="text-xs text-gray-500">2 days ago</span>
+                        </div>
+                        <h5 className="font-semibold text-sm text-gray-900 mb-1">Advanced Calculus</h5>
+                        <div className="flex items-center space-x-3 text-xs text-gray-600">
+                          <span className="flex items-center space-x-1">
+                            <svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                            </svg>
+                            <span>8 chapters</span>
+                          </span>
+                        </div>
+                      </div>
+                      <div className="flex flex-col items-end space-y-1">
+                        <div className="w-12 bg-white/30 backdrop-blur-sm rounded-full h-1.5 border border-white/40">
+                          <div className="bg-gradient-to-r from-primary-500 to-primary-600 h-1.5 rounded-full" style={{ width: '65%' }}></div>
+                        </div>
+                        <span className="text-xs text-gray-700 font-semibold">65%</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="bg-white/20 backdrop-blur-sm border border-white/30 rounded-xl p-4 transition-all duration-300 hover:bg-white/30 hover:border-white/40 hover:shadow-lg hover:shadow-primary-500/20 cursor-pointer group/course animate-slide-up" style={{ animationDelay: '1s' }}>
+                    <div className="absolute inset-0 rounded-xl bg-gradient-to-r from-primary-400/5 to-secondary-400/5 opacity-0 group-hover/course:opacity-100 transition-opacity duration-300"></div>
+                    <div className="relative z-10 flex items-center justify-between">
+                      <div className="flex-1">
+                        <div className="flex items-center space-x-2 mb-2">
+                          <span className="bg-secondary-500/20 backdrop-blur-sm text-secondary-800 border border-secondary-500/30 px-2 py-0.5 rounded-lg text-xs font-semibold">
+                            Physics
+                          </span>
+                          <span className="text-xs text-gray-500">5 days ago</span>
+                        </div>
+                        <h5 className="font-semibold text-sm text-gray-900 mb-1">Quantum Mechanics</h5>
+                        <div className="flex items-center space-x-3 text-xs text-gray-600">
+                          <span className="flex items-center space-x-1">
+                            <svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                            </svg>
+                            <span>12 chapters</span>
+                          </span>
+                        </div>
+                      </div>
+                      <div className="flex flex-col items-end space-y-1">
+                        <div className="w-12 bg-white/30 backdrop-blur-sm rounded-full h-1.5 border border-white/40">
+                          <div className="bg-gradient-to-r from-secondary-500 to-secondary-600 h-1.5 rounded-full" style={{ width: '32%' }}></div>
+                        </div>
+                        <span className="text-xs text-gray-700 font-semibold">32%</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
