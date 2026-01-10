@@ -74,7 +74,7 @@ const DashboardNavbar: React.FC<DashboardNavbarProps> = ({ user, onLogout, toggl
               </svg>
             </button>
             <Link to="/" className="flex items-center space-x-2">
-              <h1 className="text-xl font-bold text-primary-600 transition-all duration-500 ease-in-out transform group-hover:scale-105 group-hover:-translate-y-0.5 animated-brand">Discero</h1>
+              <h1 className="text-xl font-bold animated-brand">Discero</h1>
             </Link>
             <div className="hidden md:block">
               <span className="text-xl text-gray-400">/</span>

@@ -29,7 +29,6 @@ const DashboardSidebar: React.FC<DashboardSidebarProps> = ({ userProfile }) => {
           </div>
           <div>
             <p className="font-semibold text-gray-900">{userProfile?.displayName}</p>
-            <p className="text-sm text-gray-600 capitalize font-medium">{userProfile?.subscriptionTier} Plan</p>
           </div>
         </div>
 

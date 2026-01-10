@@ -201,7 +201,7 @@ const DashboardHome: React.FC = () => {
       )}
 
       {/* Quick Actions */}
-      <div className="bg-white/20 backdrop-blur-md border border-white/30 rounded-2xl p-6 shadow-lg shadow-black/5">
+      {/* <div className="bg-white/20 backdrop-blur-md border border-white/30 rounded-2xl p-6 shadow-lg shadow-black/5">
         <div>
           <h3 className="text-xl font-bold text-gray-900 mb-6">Quick Actions</h3>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
@@ -245,7 +245,7 @@ const DashboardHome: React.FC = () => {
             </button>
           </div>
         </div>
-      </div>
+      </div> */}
     </div>
   )
 }

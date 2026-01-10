@@ -1,8 +1,10 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
+import { useAuth } from '../contexts/AuthContext';
 
 const Hero: React.FC = () => {
   const navigate = useNavigate();
+  const { currentUser } = useAuth();
 
   return (
     <section className="relative py-20 lg:py-32 overflow-hidden">
@@ -38,7 +40,7 @@ const Hero: React.FC = () => {
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
             <button
-              onClick={() => navigate('/signup')}
+              onClick={() => navigate(currentUser ? '/dashboard' : '/signup')}
               className="relative bg-gradient-to-r from-primary-600 to-primary-500 text-white px-10 py-5 rounded-2xl font-bold text-base tracking-wide transition-all duration-500 hover:shadow-2xl hover:shadow-primary-500/50 transform hover:scale-105 active:scale-95 group overflow-hidden"
             >
               <span className="relative z-10 flex items-center justify-center gap-2">
@@ -65,7 +67,7 @@ const Hero: React.FC = () => {
         {/* Dashboard preview */}
         <div className="mt-20 relative">
           {/* Glow effect */}
-          <div className="absolute -inset-4 bg-gradient-to-r from-primary-500/20 to-secondary-500/20 rounded-3xl blur-2xl"></div>
+          <div className="absolute -inset-2 bg-gradient-to-r from-primary-500/10 to-secondary-500/10 rounded-3xl blur-xl"></div>
 
           <div className="relative bg-white/30 backdrop-blur-md border border-white/40 rounded-3xl p-8 max-w-5xl mx-auto transition-all duration-500 hover:bg-white/40 hover:border-white/60 hover:shadow-2xl hover:shadow-primary-500/30 group shadow-xl shadow-black/10">
             <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-primary-400/10 via-secondary-400/10 to-primary-400/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
