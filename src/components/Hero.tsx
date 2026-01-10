@@ -81,7 +81,7 @@ const Hero: React.FC = () => {
                 {/* Header */}
                 <div className="flex items-center justify-between mb-6">
                   <div>
-                    <h3 className="text-lg font-bold text-gray-900">Your Dashboard</h3>
+                    <h3 className="text-lg font-bold text-gray-900">Dashboard Preview</h3>
                     <p className="text-sm text-gray-600">Track your learning progress</p>
                   </div>
                   <div className="w-8 h-8 bg-primary-100 rounded-full flex items-center justify-center">
