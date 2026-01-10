@@ -11,10 +11,10 @@ interface DashboardNavbarProps {
 
 const DashboardNavbar: React.FC<DashboardNavbarProps> = ({ user, onLogout, toggleSidebar }) => {
   const [isProfileMenuOpen, setIsProfileMenuOpen] = useState(false)
-  const [isNotificationMenuOpen, setIsNotificationMenuOpen] = useState(false)
+  // const [isNotificationMenuOpen, setIsNotificationMenuOpen] = useState(false)
   const [searchQuery, setSearchQuery] = useState('')
   const profileMenuRef = useRef<HTMLDivElement>(null)
-  const notificationMenuRef = useRef<HTMLDivElement>(null)
+  // const notificationMenuRef = useRef<HTMLDivElement>(null)
   const navigate = useNavigate()
 
   // Close menus when clicking outside
@@ -23,9 +23,9 @@ const DashboardNavbar: React.FC<DashboardNavbarProps> = ({ user, onLogout, toggl
       if (profileMenuRef.current && !profileMenuRef.current.contains(event.target as Node)) {
         setIsProfileMenuOpen(false)
       }
-      if (notificationMenuRef.current && !notificationMenuRef.current.contains(event.target as Node)) {
-        setIsNotificationMenuOpen(false)
-      }
+      // if (notificationMenuRef.current && !notificationMenuRef.current.contains(event.target as Node)) {
+      //   setIsNotificationMenuOpen(false)
+      // }
     }
 
     document.addEventListener('mousedown', handleClickOutside)
@@ -43,13 +43,13 @@ const DashboardNavbar: React.FC<DashboardNavbarProps> = ({ user, onLogout, toggl
   }
 
   // Mock notifications - replace with real data later
-  const notifications = [
-    { id: 1, message: "New course 'Advanced React' is available", time: "2 hours ago", unread: true },
-    { id: 2, message: "You completed 'JavaScript Fundamentals'", time: "1 day ago", unread: false },
-    { id: 3, message: "Weekly progress report is ready", time: "2 days ago", unread: true },
-  ]
+  // const notifications = [
+  //   { id: 1, message: "New course 'Advanced React' is available", time: "2 hours ago", unread: true },
+  //   { id: 2, message: "You completed 'JavaScript Fundamentals'", time: "1 day ago", unread: false },
+  //   { id: 3, message: "Weekly progress report is ready", time: "2 days ago", unread: true },
+  // ]
 
-  const unreadCount = notifications.filter(n => n.unread).length
+  // const unreadCount = notifications.filter(n => n.unread).length
 
   const handleSearch = (e: React.FormEvent) => {
     e.preventDefault()
@@ -101,8 +101,8 @@ const DashboardNavbar: React.FC<DashboardNavbarProps> = ({ user, onLogout, toggl
             </form>
 
             {/* Notifications */}
-            <div className="relative" ref={notificationMenuRef}>
-              <button
+            {/* <div className="relative" ref={notificationMenuRef}> */}
+              {/* <button
                 onClick={() => setIsNotificationMenuOpen(!isNotificationMenuOpen)}
                 className="relative p-2 text-gray-600 hover:text-gray-900 hover:bg-gray-100 rounded-lg transition-colors"
               >
@@ -117,10 +117,10 @@ const DashboardNavbar: React.FC<DashboardNavbarProps> = ({ user, onLogout, toggl
                     {unreadCount}
                   </span>
                 )}
-              </button>
+              </button> */}
 
               {/* Notifications dropdown */}
-              {isNotificationMenuOpen && (
+              {/* {isNotificationMenuOpen && (
                 <div className="absolute right-0 mt-2 w-80 bg-white rounded-lg shadow-lg border border-gray-200 py-2 z-50">
                   <div className="px-4 py-2 border-b border-gray-100">
                     <h3 className="text-sm font-semibold text-gray-900">Notifications</h3>
@@ -144,8 +144,8 @@ const DashboardNavbar: React.FC<DashboardNavbarProps> = ({ user, onLogout, toggl
                     </button>
                   </div>
                 </div>
-              )}
-            </div>
+              )} */}
+            {/* </div> */}
 
             {/* Profile dropdown */}
             <div className="relative" ref={profileMenuRef}>
