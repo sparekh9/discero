@@ -13,9 +13,9 @@ const DashboardSidebar: React.FC<DashboardSidebarProps> = ({ userProfile }) => {
   const navigation = [
     { name: 'Overview', href: '/dashboard', icon: '📊' },
     { name: 'My Courses', href: '/dashboard/courses', icon: '📚' },
-    { name: 'Progress', href: '/dashboard/progress', icon: '📈' },
-    { name: 'Flashcards', href: '/dashboard/flashcards', icon: '🃏' },
-    { name: 'Practice', href: '/dashboard/practice', icon: '🧮' },
+    // { name: 'Progress', href: '/dashboard/progress', icon: '📈' },
+    // { name: 'Flashcards', href: '/dashboard/flashcards', icon: '🃏' },
+    // { name: 'Practice', href: '/dashboard/practice', icon: '🧮' },
   ]
 
   return (
